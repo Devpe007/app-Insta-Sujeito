@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
         padding: 8
     },
     fotoPerfil:{
-        width: 50,
-        height: 50,
+        width: 30,
+        height: 30,
         borderRadius: 25,
     },
     nomeUsuario:{
