@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 
 import Header from './src/Header';
+import Storys from './src/Storys';
 import List from './src/List';
 
 export default function App() {
@@ -57,6 +58,8 @@ export default function App() {
     <View style={styles.container}>
 
       <Header/>
+
+      <Storys/>
 
       <FlatList
         showsVerticalScrollIndicator={false}
