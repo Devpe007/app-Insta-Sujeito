@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, FlatList, ScrollView } from 'react-native';
 import Header from './src/Header';
 import Storys from './src/Storys';
 import List from './src/List';
+import BaseBoard from './src/BaseBoard';
 
 export default function App() {
   const [feed, setFeed] = useState([
@@ -105,28 +106,30 @@ export default function App() {
 
       <Header/>
 
-      <View>
+      <ScrollView>
 
-        <ScrollView>
+        <View>
 
-        <FlatList
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={ (item) => item.id }
-          horizontal={true}
-          data={storys}
-          renderItem={ ({ item }) => <Storys data={item} /> }
-        />
+            <FlatList
+              showsHorizontalScrollIndicator={false}
+              keyExtractor={ (item) => item.id }
+              horizontal={true}
+              data={storys}
+              renderItem={ ({ item }) => <Storys data={item} /> }
+            />
+
+        </View>
 
         <FlatList
           showsVerticalScrollIndicator={false}
           keyExtractor={ (item) => item.id }
           data={feed}
           renderItem={ ({ item }) => <List data={item} /> }
-        /> 
+        />
 
-        </ScrollView>
+      </ScrollView>
 
-      </View>
+      <BaseBoard/>
 
     </View>
   );
